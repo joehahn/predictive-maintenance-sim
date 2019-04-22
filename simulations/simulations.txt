@@ -1,0 +1,5 @@
+the simulations discussed in the README are stored elsewhere on my laptop,
+and I haven't gotten around to pushing them to this repo, this is on
+my todo list
+
+-jh

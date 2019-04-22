@@ -39,8 +39,17 @@ utilization.
 
 ### requirements:
 
-This demo was written in python v2.7 with these additional python packages also installed: 
-jupyter, matplotlib, numpy, pandas, scikit-learn, and seaborn.
+This simulation was written in python v2.7 and requires these additional python packages: 
+jupyter, matplotlib, numpy, pandas, scikit-learn, and seaborn. See my install_notes.txt
+which describes how I install Anaconda python on my Mac laptop, which is the easiest way to
+install all required packages.
+
+After python is installed, set the PYTHON_PATH bash variable to point at your python install,
+which for me is
+
+    PYTHON_PATH=./anaconda2/bin
+
+since I installed Anaconda python within this repo
 
 
 ### execute RTF simulatation:
@@ -80,7 +89,7 @@ until a technician arrives to service that well.
 To evolve those N_devices=1000 wells for N_timesteps=50000 during which
 they produce oil/gas while occasionally experiencing downtime due to issues, execute
 
-    python pdm.py inputs_rtf.py
+    $PYTHON_PATH/python pdm.py inputs_rtf.py
     
 which will generate a stream of FAILURE reports as devices (aka wells) fail due to various issues, and are
 sent to MAINTENANCE where an available technician is assigned to repair that device:
@@ -143,9 +152,9 @@ P,T,L settings at the moment of failure, as well as the well's production_rate t
 
 To inspect the RTF output in greater detail, start jupyter via
 
-    jupyter notebook --ip=127.0.0.1
+    $PYTHON_PATH/jupyter notebook
 
-browse the indicated url, and
+browse the indicated url as needed, and
 then navigate to _inspect_rtf_sim.ipynb_ and click the >> button to refresh that notebook's content.
 That notebook will load the simulation's telemetry into a pandas dataframe, as well as the repair logs,
 then join those two datasets as the records dataframe, with that dataframe then used to generate a number of plots.
@@ -271,7 +280,7 @@ diminishes overall production efficiency due to the longer repair times.
 
 Now that the PdM models have been built, execute the simulation again but in PdM mode:
 
-    python pdm.py inputs_pdm.py
+    $PYTHON_PATH/python pdm.py inputs_pdm.py
 
 which calls the same pdm.py script that instead reads the inputs_pdm.py parameter file,
 which has settings that are identical to that used earlier (eg inputs_rtf.py)
