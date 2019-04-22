@@ -1,0 +1,7 @@
+private
+*.pyc
+*.csv.gz
+.ipynb_checkpoints
+*.pkl
+.DS_Store
+anaconda2
