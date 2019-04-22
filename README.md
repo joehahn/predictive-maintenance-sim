@@ -36,6 +36,8 @@ a Jupyter notebook loads the PdM output to assess how the suite of simulated wel
 production is boosted by the PdM strategy, and how PdM also impacts the technicians'
 utilization.
 
+See also my blog post on this topic at 
+https://www.datascience.com/blog/predictive-maintenance-for-upstream-oil-and-gas
 
 ### requirements:
 
