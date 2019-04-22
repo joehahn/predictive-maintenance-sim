@@ -376,15 +376,13 @@ with technician utilization as low as 54% when maintenance_duration = 2% of repa
 * A toy-model simulation is developed and used to assess the impact of a predictive maintenance (PdM) strategy
 that is applied to upstream oil & gas. The model's key features include code that generates mock sensor
 telemetry plus repair logs emitted over time by numerous virtual oil & gas wells that produce fluid and also
-suffer occasional failures, as well as the productivity loss that results  
-as failed wells wait to be repaired by a pool of virtual repair technicians.
-The simulated wells are first evolved using a run-to-fail (RTF) maintenance strategy.
-Machine learning (ML) models are then trained
+suffer occasional failures, as well as the productivity loss that results  as failed wells wait to be 
+repaired by a pool of virtual repair technicians. The simulated wells are first evolved using a 
+run-to-fail (RTF) maintenance strategy. Machine learning (ML) models are then trained
 on that RTF telemetry + repair data to predict whether a given well will suffer a particular fatal issue
-X number of timesteps hence. Then the simulated wells are evolved
-again in PdM mode, which uses those ML models to preferentially
-repair those wells most likely to fail soon. Jupyter notebooks are also used to inspect simulation output
-and to quantify the production boost that results from PdM
+X number of timesteps hence. Then the simulated wells are evolved again in PdM mode, which uses those 
+ML models to preferentially repair those wells most likely to fail soon. Jupyter notebooks are also 
+used to inspect simulation output and to quantify the production boost that results from PdM
 
 * When a PdM strategy is applied to this toy-model simulation of
 upstream oil & gas, only very modest gains in well productivity were achieved, about 1-3%
