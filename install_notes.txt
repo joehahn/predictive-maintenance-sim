@@ -1,0 +1,55 @@
+#install_notes.txt
+#
+#by Joe Hahn
+#joe.hahn@oracle.com
+#21 April 2019
+#
+#notes on installing predictive-maintenance-sim
+
+1 browse https://repo.anaconda.com/archive and pick a recent Anaconda release
+
+    release=Anaconda2-2018.12-MacOSX-x86_64.sh
+
+which will install python 2.7.15 for my Mac laptop.
+
+2 download and install Anaconda python:
+
+    wget https://repo.anaconda.com/archive/$release
+    chmod +x $release
+    ./$release -b -p ./anaconda2
+    ./anaconda2/bin/python --version
+
+which installs Anaconda python in the predictive-maintenance-sim folder
+
+3 set path to python, ipython, jupyter etc:
+
+    PYTHON_PATH=./anaconda2/bin
+    $PYTHON_PATH/python --version
+
+4 also note python package version numbers
+
+    $PYTHON_PATH/pip freeze | grep 'matplotlib\|numpy\|pandas\|scikit-learn\|seaborn\|jupyter'
+
+which yields
+
+    jupyter==1.0.0
+    matplotlib==2.2.3
+    numpy==1.15.1
+    pandas==0.23.4
+    scikit-learn==0.20.1
+    seaborn==0.9.0
+
+5 generate RTF data:
+
+    $PYTHON_PATH/python ./pdm.py inputs_rtf.py
+
+6 start Jupyter
+
+    $PYTHON_PATH/jupyter notebook
+
+7 execute the build_models.ipynb Jupyter notebook, to build & test the ML models
+
+8 run demo in PdM mode:
+
+    $PYTHON_PATH/python ./pdm.py inputs_pdm.py
+
