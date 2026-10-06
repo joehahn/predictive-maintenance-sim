@@ -1,7 +1,7 @@
 # predictive-maintenance-sim
 
 by Joe Hahn,<br />
-joe.hahn@oracle.com,<br />
+joe.hahn@jmh-datasciences.com,<br />
 21 April 2019<br />
 git branch=master
 
